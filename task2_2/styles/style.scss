@@ -1,2 +1,25 @@
 @import "variables";
 @import "mixins";
+
+body {
+  max-height: 1000px;
+  margin: 0 auto;
+  font-family: sans-serif, serif;
+}
+
+.header {
+  text-align: center;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 5%;
+  height: 6px;
+  margin: 10px auto;
+  background-color: goldenrod;
+}
