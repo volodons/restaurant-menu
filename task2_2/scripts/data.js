@@ -1,4 +1,4 @@
-export const dishes = [
+const dishes = [
   {
     name: "Pasta",
     price: "$15.99",
@@ -80,3 +80,4 @@ export const dishes = [
     category: "Breakfast",
   },
 ];
+export { dishes };

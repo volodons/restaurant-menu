@@ -1,6 +1,7 @@
 "use strict";
 
 import { dishes } from "./data.js";
+
 const buttonAll = document.getElementById("all");
 const buttonBreakfast = document.getElementById("breakfast");
 const buttonLunch = document.getElementById("lunch");
