@@ -1,4 +1,4 @@
-export const data = [
+export const dishes = [
   {
     name: 'Pasta';
     price: '$15.99';
