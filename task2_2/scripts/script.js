@@ -12,14 +12,33 @@ const card = document.getElementById("card");
 const cards = document.querySelectorAll(".card");
 const mainContent = document.querySelector(".main-content");
 
-buttonAll.addEventListener("click", allListed);
+buttonAll.addEventListener("click", showAll);
 buttonBreakfast.addEventListener("click", showBreakfast);
 buttonLunch.addEventListener("click", showLunch);
 buttonDinner.addEventListener("click", showDinner);
 buttonDrinks.addEventListener("click", showDrinks);
 
-function allListed() {
-  alert("We have all dishes listed, enjoy!");
+function showAll() {
+  mainContent.innerHTML = "";
+  for (let i = 0; i < dishes.length; i++) {
+    const html = document.createElement("div");
+    html.innerHTML = `<div class="card" id="card">
+        <img
+          class="card__image"
+          src=${dishes[i].image}
+          alt=${dishes[i].name}
+          title=${dishes[i].name}
+        />
+        <h2 class="card__header">
+          <span class="card__header--header-color">${dishes[i].name}</span>
+          <span class="card__header--decoration-color">${dishes[i].price}</span>
+        </h2>
+        <h3 class="card__description">
+          ${dishes[i].description}
+        </h3>
+      </div>`;
+    mainContent.append(html);
+  }
 }
 
 function showBreakfast() {
