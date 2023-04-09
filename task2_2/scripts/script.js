@@ -7,7 +7,7 @@ const buttonBreakfast = document.getElementById("breakfast");
 const buttonLunch = document.getElementById("lunch");
 const buttonDinner = document.getElementById("dinner");
 const buttonDrinks = document.getElementById("drinks");
-const mainContent = document.querySelector(".main-content");
+const allCards = document.querySelector(".main-content");
 
 buttonAll.addEventListener("click", showAll);
 buttonBreakfast.addEventListener("click", showBreakfast);
@@ -16,7 +16,7 @@ buttonDinner.addEventListener("click", showDinner);
 buttonDrinks.addEventListener("click", showDrinks);
 
 function showAll() {
-  mainContent.innerHTML = "";
+  allCards.innerHTML = "";
   for (let i = 0; i < dishes.length; i++) {
     const html = document.createElement("div");
     html.innerHTML = `<div class="card" id="card">
@@ -34,12 +34,12 @@ function showAll() {
           ${dishes[i].description}
         </h3>
       </div>`;
-    mainContent.append(html);
+    allCards.append(html);
   }
 }
 
 function showBreakfast() {
-  mainContent.innerHTML = "";
+  allCards.innerHTML = "";
   const result = dishes.filter((dish) => {
     return dish.category === "Breakfast";
   });
@@ -60,12 +60,12 @@ function showBreakfast() {
           ${result[i].description}
         </h3>
       </div>`;
-    mainContent.append(html);
+    allCards.append(html);
   }
 }
 
 function showLunch() {
-  mainContent.innerHTML = "";
+  allCards.innerHTML = "";
   const result = dishes.filter((dish) => {
     return dish.category === "Lunch";
   });
@@ -86,12 +86,12 @@ function showLunch() {
           ${result[i].description}
         </h3>
       </div>`;
-    mainContent.append(html);
+    allCards.append(html);
   }
 }
 
 function showDinner() {
-  mainContent.innerHTML = "";
+  allCards.innerHTML = "";
   const result = dishes.filter((dish) => {
     return dish.category === "Dinner";
   });
@@ -112,12 +112,12 @@ function showDinner() {
           ${result[i].description}
         </h3>
       </div>`;
-    mainContent.append(html);
+    allCards.append(html);
   }
 }
 
 function showDrinks() {
-  mainContent.innerHTML = "";
+  allCards.innerHTML = "";
   const result = dishes.filter((dish) => {
     return dish.category === "Drinks";
   });
@@ -138,6 +138,6 @@ function showDrinks() {
           ${result[i].description}
         </h3>
       </div>`;
-    mainContent.append(html);
+    allCards.append(html);
   }
 }
