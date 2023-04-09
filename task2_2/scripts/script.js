@@ -40,24 +40,24 @@ function showAll() {
 
 function showBreakfast() {
   allCards.innerHTML = "";
-  const result = dishes.filter((dish) => {
+  const itemsBreakfast = dishes.filter((dish) => {
     return dish.category === "Breakfast";
   });
-  for (let i = 0; i < result.length; i++) {
+  for (let i = 0; i < itemsBreakfast.length; i++) {
     const html = document.createElement("div");
     html.innerHTML = `<div class="card" id="card">
         <img
           class="card__image"
-          src=${result[i].image}
-          alt=${result[i].name}
-          title=${result[i].name}
+          src=${itemsBreakfast[i].image}
+          alt=${itemsBreakfast[i].name}
+          title=${itemsBreakfast[i].name}
         />
         <h2 class="card__header">
-          <span class="card__header--header-color">${result[i].name}</span>
-          <span class="card__header--decoration-color">${result[i].price}</span>
+          <span class="card__header--header-color">${itemsBreakfast[i].name}</span>
+          <span class="card__header--decoration-color">${itemsBreakfast[i].price}</span>
         </h2>
         <h3 class="card__description">
-          ${result[i].description}
+          ${itemsBreakfast[i].description}
         </h3>
       </div>`;
     allCards.append(html);
@@ -66,24 +66,24 @@ function showBreakfast() {
 
 function showLunch() {
   allCards.innerHTML = "";
-  const result = dishes.filter((dish) => {
+  const itemsLunch = dishes.filter((dish) => {
     return dish.category === "Lunch";
   });
-  for (let i = 0; i < result.length; i++) {
+  for (let i = 0; i < itemsLunch.length; i++) {
     const html = document.createElement("div");
     html.innerHTML = `<div class="card" id="card">
         <img
           class="card__image"
-          src=${result[i].image}
-          alt=${result[i].name}
-          title=${result[i].name}
+          src=${itemsLunch[i].image}
+          alt=${itemsLunch[i].name}
+          title=${itemsLunch[i].name}
         />
         <h2 class="card__header">
-          <span class="card__header--header-color">${result[i].name}</span>
-          <span class="card__header--decoration-color">${result[i].price}</span>
+          <span class="card__header--header-color">${itemsLunch[i].name}</span>
+          <span class="card__header--decoration-color">${itemsLunch[i].price}</span>
         </h2>
         <h3 class="card__description">
-          ${result[i].description}
+          ${itemsLunch[i].description}
         </h3>
       </div>`;
     allCards.append(html);
@@ -92,24 +92,24 @@ function showLunch() {
 
 function showDinner() {
   allCards.innerHTML = "";
-  const result = dishes.filter((dish) => {
+  const itemsDinner = dishes.filter((dish) => {
     return dish.category === "Dinner";
   });
-  for (let i = 0; i < result.length; i++) {
+  for (let i = 0; i < itemsDinner.length; i++) {
     const html = document.createElement("div");
     html.innerHTML = `<div class="card" id="card">
         <img
           class="card__image"
-          src=${result[i].image}
-          alt=${result[i].name}
-          title=${result[i].name}
+          src=${itemsDinner[i].image}
+          alt=${itemsDinner[i].name}
+          title=${itemsDinner[i].name}
         />
         <h2 class="card__header">
-          <span class="card__header--header-color">${result[i].name}</span>
-          <span class="card__header--decoration-color">${result[i].price}</span>
+          <span class="card__header--header-color">${itemsDinner[i].name}</span>
+          <span class="card__header--decoration-color">${itemsDinner[i].price}</span>
         </h2>
         <h3 class="card__description">
-          ${result[i].description}
+          ${itemsDinner[i].description}
         </h3>
       </div>`;
     allCards.append(html);
@@ -118,24 +118,24 @@ function showDinner() {
 
 function showDrinks() {
   allCards.innerHTML = "";
-  const result = dishes.filter((dish) => {
+  const itemsDrinks = dishes.filter((dish) => {
     return dish.category === "Drinks";
   });
-  for (let i = 0; i < result.length; i++) {
+  for (let i = 0; i < itemsDrinks.length; i++) {
     const html = document.createElement("div");
     html.innerHTML = `<div class="card" id="card">
         <img
           class="card__image"
-          src=${result[i].image}
-          alt=${result[i].name}
-          title=${result[i].name}
+          src=${itemsDrinks[i].image}
+          alt=${itemsDrinks[i].name}
+          title=${itemsDrinks[i].name}
         />
         <h2 class="card__header">
-          <span class="card__header--header-color">${result[i].name}</span>
-          <span class="card__header--decoration-color">${result[i].price}</span>
+          <span class="card__header--header-color">${itemsDrinks[i].name}</span>
+          <span class="card__header--decoration-color">${itemsDrinks[i].price}</span>
         </h2>
         <h3 class="card__description">
-          ${result[i].description}
+          ${itemsDrinks[i].description}
         </h3>
       </div>`;
     allCards.append(html);
