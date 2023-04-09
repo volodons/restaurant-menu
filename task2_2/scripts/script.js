@@ -7,9 +7,6 @@ const buttonBreakfast = document.getElementById("breakfast");
 const buttonLunch = document.getElementById("lunch");
 const buttonDinner = document.getElementById("dinner");
 const buttonDrinks = document.getElementById("drinks");
-const body = document.getElementById("body");
-const card = document.getElementById("card");
-const cards = document.querySelectorAll(".card");
 const mainContent = document.querySelector(".main-content");
 
 buttonAll.addEventListener("click", showAll);
