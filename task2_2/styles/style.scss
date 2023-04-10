@@ -94,10 +94,7 @@ body {
 
 @media (max-width: 1000px) {
   .main-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(10, 1fr);
-    row-gap: 2rem;
-    justify-items: stretch;
+    display: flex;
+    flex-flow: column wrap;
   }
 }
