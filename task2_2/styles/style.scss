@@ -79,17 +79,17 @@ body {
 
 .card__header--header-color {
   color: $header-color;
-  font-size: 1.25rem;
+  font-size: $header-font-size;
 }
 
 .card__header--decoration-color {
   color: $decoration-color;
-  font-size: 1.25rem;
+  font-size: $header-font-size;
 }
 
 .card__description {
   color: $text-color;
-  font-size: 1rem;
+  font-size: $description-font-size;
   font-weight: normal;
 }
 
