@@ -16,51 +16,52 @@ buttonDinner.addEventListener("click", () => show("Dinner"));
 buttonDrinks.addEventListener("click", () => show("Drinks"));
 
 function show(type) {
-  if (
-    type == "Breakfast" ||
-    type == "Lunch" ||
-    type == "Dinner" ||
-    type == "Drinks"
-  ) {
+  if (!type) {
+    allCards.innerHTML = "";
+    for (let i = 0; i < dishes.length; i++) {
+      const html = document.createElement("div");
+      html.innerHTML = `<div class="card" id="card">
+        <img
+          class="card__image"
+          src=${dishes[i].image}
+          alt=${dishes[i].name}
+          title=${dishes[i].name}
+        />
+        <h2 class="card__header">
+          <span class="card__header--header-color">${dishes[i].name}</span>
+          <span class="card__header--decoration-color">${dishes[i].price}</span>
+        </h2>
+        <h3 class="card__description">
+          ${dishes[i].description}
+        </h3>
+      </div>`;
+      allCards.append(html);
+    }
+    return;
+  } else {
     allCards.innerHTML = "";
     const filteredDishes = dishes.filter((dish) => {
       return dish.category === type;
     });
     for (let i = 0; i < filteredDishes.length; i++) {
       const html = document.createElement("div");
-      html.innerHTML = `<img
-            class="card__image"
-            src=${filteredDishes[i].image}
-            alt=${filteredDishes[i].name}
-            title=${filteredDishes[i].name}
-          />
-          <h2 class="card__header">
-            <span class="card__header--header-color">${filteredDishes[i].name}</span>
-            <span class="card__header--decoration-color">${filteredDishes[i].price}</span>
-          </h2>
-          <h3 class="card__description">
-            ${filteredDishes[i].description}
-          </h3>`;
+      html.innerHTML = `<div class="card" id="card">
+        <img
+          class="card__image"
+          src=${filteredDishes[i].image}
+          alt=${filteredDishes[i].name}
+          title=${filteredDishes[i].name}
+        />
+        <h2 class="card__header">
+          <span class="card__header--header-color">${filteredDishes[i].name}</span>
+          <span class="card__header--decoration-color">${filteredDishes[i].price}</span>
+        </h2>
+        <h3 class="card__description">
+          ${filteredDishes[i].description}
+        </h3>
+      </div>`;
       allCards.append(html);
     }
-  } else if (type == null) {
-    allCards.innerHTML = "";
-    for (let i = 0; i < dishes.length; i++) {
-      const html = document.createElement("div");
-      html.innerHTML = `<img
-            class="card__image"
-            src=${dishes[i].image}
-            alt=${dishes[i].name}
-            title=${dishes[i].name}
-          />
-          <h2 class="card__header">
-            <span class="card__header--header-color">${dishes[i].name}</span>
-            <span class="card__header--decoration-color">${dishes[i].price}</span>
-          </h2>
-          <h3 class="card__description">
-            ${dishes[i].description}
-          </h3>`;
-      allCards.append(html);
-    }
+    return;
   }
 }
