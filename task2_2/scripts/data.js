@@ -3,7 +3,7 @@ const dishes = [
     name: "Pasta",
     price: "$15.99",
     description:
-      "I'm baby woke milkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold- pressed",
+      "I'm baby woke milkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed",
     image: "./images/dinner-pasta.webp",
     category: "Dinner",
   },
