@@ -15,6 +15,8 @@ buttonLunch.addEventListener("click", () => show("Lunch"));
 buttonDinner.addEventListener("click", () => show("Dinner"));
 buttonDrinks.addEventListener("click", () => show("Drinks"));
 
+show();
+
 function show(type) {
   if (!type) {
     allCards.innerHTML = "";
